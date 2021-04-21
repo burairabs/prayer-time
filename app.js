@@ -19,9 +19,10 @@
         }
 
         function renderTimings(data) {
-          $('#eMonth').text(data[0].date.gregorian.month.en);
-          $('#aMonth').text(data[0].date.hijri.month.en);
-            for(let d of data){
+           $('#eMonth').text(data[0].date.gregorian.month.en);
+           $('#aMonth').text(data[0].date.hijri.month.en);
+            //let count =0;
+             for(let d of data){
               $('#time-table').append(`
               <tr>
                 <td>${d.date.gregorian.day}</td>
@@ -33,6 +34,7 @@
                 <td>${d.timings.Sunset.substring(0, 6)}</td>
               </tr>`)
               //console.log(d.timings.Fajr, count);
+              //count++
             }
         }
 
