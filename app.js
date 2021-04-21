@@ -4,7 +4,7 @@
                 .then(res => res.json())
                 .then(response => {
                     $('#locPlace').val(`${response.city}, ${response.country}`);
-                    fetch(`http://api.aladhan.com/v1/calendarByCity?city=${response.city}&country=${response.country}&method=0`)
+                    fetch(`https://api.aladhan.com/v1/calendarByCity?city=${response.city}&country=${response.country}&method=0`)
                         .then(res => res.json())
                         .then(d => {
                             const { data } = d;
